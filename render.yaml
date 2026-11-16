@@ -1,0 +1,35 @@
+services:
+  # Frontend (Vite SPA). Backend routes are rewritten (not redirected) to the
+  # backend service so the browser stays on this origin and the session cookie
+  # is first-party. Rewrite order matters: backend routes come before the SPA fallback.
+  - type: web
+    name: ctf-ai-hub-fe
+    runtime: static
+    rootDir: .
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://ctf-ai-hub-v1.onrender.com/api/*
+      - type: rewrite
+        source: /login
+        destination: https://ctf-ai-hub-v1.onrender.com/login
+      - type: rewrite
+        source: /logout
+        destination: https://ctf-ai-hub-v1.onrender.com/logout
+      - type: rewrite
+        source: /robots.txt
+        destination: https://ctf-ai-hub-v1.onrender.com/robots.txt
+      - type: rewrite
+        source: /backup/*
+        destination: https://ctf-ai-hub-v1.onrender.com/backup/*
+      - type: rewrite
+        source: /docs
+        destination: https://ctf-ai-hub-v1.onrender.com/docs
+      - type: rewrite
+        source: /openapi.json
+        destination: https://ctf-ai-hub-v1.onrender.com/openapi.json
+      - type: rewrite
+        source: /*
+        destination: /index.html

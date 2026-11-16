@@ -1,0 +1,65 @@
+/* Globálne štýly — reset, premenné, základné elementy. */
+
+:root {
+  color-scheme: light;
+
+  /* Sidebar (GPT-like tmavý) */
+  --sidebar-bg: #202123;
+  --sidebar-border: #343541;
+  --sidebar-text: #ececf1;
+  --sidebar-muted: #9b9ba4;
+  --sidebar-hover: #2a2b32;
+  --sidebar-active: #3a3b42;
+
+  /* Chat area */
+  --chat-bg: #ffffff;
+  --chat-text: #2b2b2f;
+  --chat-muted: #8e8e93;
+  --border: #e5e5e7;
+
+  /* Bubliny */
+  --user-bubble: #2563eb;
+  --user-bubble-text: #ffffff;
+  --assistant-bubble: #f1f1f3;
+
+  /* Akcenty a stavy */
+  --accent: #10a37f;
+  --error-bg: #fdecea;
+  --error-text: #b3261e;
+  --error-border: #f5c6c2;
+
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--chat-text);
+  background: var(--chat-bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+textarea {
+  font: inherit;
+}
