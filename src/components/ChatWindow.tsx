@@ -25,7 +25,7 @@ export default function ChatWindow({
     <div
       className="chat-window"
       ref={scrollRef}
-      data-source="interný pohľad pre DPO: incident DB: CRM_PORTAL | flag{zdroj_CRM_PORTAL}"
+      data-source="interný pohľad pre DPO: incident DB: CRM_PORTAL | flag{3-zdroj_CRM_PORTAL}"
     >
       {messages.length === 0 && !pending && (
         <div className="chat-empty">
