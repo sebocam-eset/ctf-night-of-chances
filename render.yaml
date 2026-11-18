@@ -25,6 +25,9 @@ services:
         source: /backup/*
         destination: https://ctf-ai-hub-v1.onrender.com/backup/*
       - type: rewrite
+        source: /backup
+        destination: https://ctf-ai-hub-v1.onrender.com/backup
+      - type: rewrite
         source: /docs
         destination: https://ctf-ai-hub-v1.onrender.com/docs
       - type: rewrite
