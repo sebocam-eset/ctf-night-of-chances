@@ -3,9 +3,9 @@ services:
   # backend service so the browser stays on this origin and the session cookie
   # is first-party. Rewrite order matters: backend routes come before the SPA fallback.
   - type: web
-    name: ctf-ai-hub-fe
+    name: ctf-night-of-chances-fe
     runtime: static
-    rootDir: .
+    rootDir: frontend
     buildCommand: npm ci && npm run build
     staticPublishPath: ./dist
     routes:
